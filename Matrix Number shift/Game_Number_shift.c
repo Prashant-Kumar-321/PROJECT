@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h> // rand(), srand(),
@@ -321,7 +320,6 @@ void convertUppercase(char *a)
 // Driver Code
 int main()
 {
-  system("color 1F"); //set backgroutn blue and forground white
 //    int matrix[N][N];
     int (*M)[N] = (int(*)[]) calloc(9,sizeof(int));
 //    int winMatrix[N][N];
