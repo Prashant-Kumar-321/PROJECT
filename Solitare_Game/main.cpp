@@ -4,27 +4,28 @@ using namespace std;
 
 int main(int argc, char*agrv[])
 {  
-  Deck Pile1, Diamond; 
-  Pile1.insertCard(12,'H', false);
-  Pile1.insertCard(1 ,'S', false);
-  Pile1.insertCard(3 ,'S', false);
-  Pile1.insertCard(9 ,'C', false);
-  Pile1.insertCard(3 ,'H', true);
-  Pile1.insertCard(2 ,'C', true);
-  Pile1.insertCard(1 ,'D', true);
+  Deck drawPile, Club;
 
-  cout<< "PILE1"<< endl;  
-  Pile1.display();
+  Club.insertCard(13,'C'); 
+  Club.insertCard(9,'C'); 
+  Club.insertCard(13,'C'); 
+  Club.insertCard(6,'C'); 
+  Club.insertCard(5,'C',true);   
+  // Club.display(Club.getFirst());
 
-  Pile1.moveToFoundation(Diamond);
-  Pile1.moveToFoundation(Diamond);  
-  Pile1.moveToFoundation(Diamond);  
+  // drawPile.insertCard(10,'D');
+  drawPile.insertCard(13,'H'); 
+  drawPile.insertCard(9,'D');
+  drawPile.insertCard(1,'C',true);
+  // drawPile.display(drawPile.getFirst()); 
 
-  cout<< "DiaMond Foundation"<< endl; 
-  Diamond.display(); 
-  
-  cout<< "PILE1"<< endl;  
-  Pile1.display(); 
+  drawPile.moveToFoundation(Club, 'C'); 
+
+  cout<< "drawPile"<< endl; 
+  drawPile.display(drawPile.getFirst());cout<< endl; 
+
+  cout<< "Club"<< endl; 
+  Club.display(Club.getFirst());   
 
   return 0; 
 }
