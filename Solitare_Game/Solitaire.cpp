@@ -11,6 +11,17 @@ Deck::~Deck()
     deleteCard(); 
 }
 
+//Insert 52 cards, 13 cards of each suit 
+void Deck::intializeFullPackCard()     //insert in deck 52 cards; All cards(13) of each suit.
+{
+  //Assumption Deck is empty
+  char suit[4] = {'D', 'C', 'H', 'S'}; //All suits 
+
+  for(int i = SUIT::DIAMOND; i <= SUIT::SPADE; i=i+1)
+    for(int rank = RANK::KING; rank >= RANK::ACE; rank=rank-1)
+      insertCard(rank, suit[i], true); 
+}
+
 //This function will play vital role while intializing cards in deck at the starting of game
 void Deck::insertCard (int rank, char suit, bool visb=false) //Append a card at the starting of deck; 
 {
