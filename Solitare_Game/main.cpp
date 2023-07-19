@@ -6,7 +6,7 @@ int main(int argc, char*agrv[])
 {  
   Deck pack; 
   pack.intializeFullPackCard(); 
-  pack.display(pack.getFirst()); 
+  pack.shuffleDeck(); 
 
   return 0; 
 }
